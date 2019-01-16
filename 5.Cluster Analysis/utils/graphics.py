@@ -4,6 +4,10 @@ import matplotlib
 import numpy as np
 import scipy.cluster.hierarchy as hiclu
 
+#In the analysis of data, a correlogram is an image of correlation statistics. For example, in time series analysis, a
+#correlogram, also known as an autocorrelation plot, is a plot of the sample autocorrelations {\displaystyle r_{h}\,}
+#r_{h}\, versus {\displaystyle h\,} h\, (the time lags).
+
 def correlogram(t, title=None, valmin=-1, valmax=1):
     f = plt.figure(title, figsize=(8, 7))
     f1 = f.add_subplot(1, 1, 1)

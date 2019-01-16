@@ -3,7 +3,24 @@ import pandas as pd
 import scipy.stats as sts
 import pandas.api.types as pdt
 
+#Introduction to Cluster Analysis:
+#While we often think of statistics as giving definitive answers to well-posed questions, there are some statistical
+#  techniques that are used simply to gain further insight into a group of observations. One such technique (which
+#  encompasses lots of different methods) is cluster analysis. The idea of cluster analysis is that we have a set of
+#  observations, on which we have available several measurements. Using these measurements, we want to find out if the
+# observations naturally group together in some predictable way. For example, we may have recorded physical measurements
+#  on many animals, and we want to know if there's a natural grouping (based, perhaps on species) that distinquishes
+#  the animals from another. (This use of cluster analysis is sometimes called "numerical taxonomy"). As another
+# example, suppose we have information on the demographics and buying habits of many consumers. We could use cluster
+# analysis on the data to see if there are distinct groups of consumers with similar demographics and buying habits
+# (market segmentation).
 
+#There are two very important decisions that need to be made whenever you are carrying
+#  out a cluster analysis. The first regards the relative scales of the variables being measured.
+#  We'll see that the available cluster analysis algorithms all depend on the concept of measuring the
+# distance (or some other measure of similarity) between the different observations we're trying to cluster.
+#  If one of the variables is measured on a much larger scale than the other variables, then whatever measure we use
+#  will be overly influenced by that variable.
 def standardize(X):
     avgs = np.mean(X, axis=0)
     stds = np.std(X, axis=0)
